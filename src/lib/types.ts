@@ -1,16 +1,23 @@
 import type { StaticImageData } from 'next/image';
+import type { LucideIcon } from 'lucide-react';
 
 export type TechDetails = {
-  logo: string | StaticImageData;
-  darkModeLogo?: string | StaticImageData;
+  icon: LucideIcon;
   label: string;
-  url: string;
+  url?: string;
+};
+
+export type SkillCategory = {
+  title: string;
+  description: string;
+  skills: TechDetails[];
 };
 
 export type ExperienceDetails = {
-  logo: string | StaticImageData;
+  logo?: string | StaticImageData;
   darkModeLogo?: string | StaticImageData;
   logoAlt: string;
+  organization?: string;
   position: string;
   currentlyWorkHere?: boolean;
   startDate: Date;
@@ -21,8 +28,12 @@ export type ExperienceDetails = {
 export type ProjectDetails = {
   name: string;
   description: string;
-  url: string;
-  previewImage: string | StaticImageData;
+  url?: string;
+  previewImage?: string | StaticImageData;
+  previewImageFit?: 'cover' | 'contain';
+  previewImagePosition?: string;
+  previewVariant?: 'loanfit';
+  featured?: boolean;
   technologies: string[];
 };
 

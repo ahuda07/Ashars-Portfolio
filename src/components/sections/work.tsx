@@ -9,10 +9,11 @@ const WorkSection = () => {
     <Container id="work">
       <div className="flex flex-col items-center gap-4">
         <div className="self-center">
-          <Tag label="Work" />
+          <Tag label="Projects" />
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
-          Some of the noteworthy projects I have built:
+          Projects spanning AI workflows, backend systems, and full-stack
+          products:
         </Typography>
       </div>
 

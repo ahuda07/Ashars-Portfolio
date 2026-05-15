@@ -1,53 +1,42 @@
-import { Github, Twitter, Figma } from 'lucide-react';
-
-import LogoJavascript from '/public/images/logos/icon-javascript.svg';
-import LogoTypescript from '/public/images/logos/icon-typescript.svg';
-import LogoReact from '/public/images/logos/icon-react.svg';
-import LogoNextjs from '/public/images/logos/icon-nextjs.svg';
-import LogoNodejs from '/public/images/logos/icon-nodejs.svg';
-import LogoExpress from '/public/images/logos/icon-express.svg';
-import LogoExpressLight from '/public/images/logos/icon-express-light.svg';
-import LogoNest from '/public/images/logos/icon-nest.svg';
-import LogoSocket from '/public/images/logos/icon-socket.svg';
-import LogoSocketLight from '/public/images/logos/icon-socket-light.svg';
-import LogoPostgreSQL from '/public/images/logos/icon-postgresql.svg';
-import LogoMongoDB from '/public/images/logos/icon-mongodb.svg';
-import LogoSass from '/public/images/logos/icon-sass.svg';
-import LogoTailwindcss from '/public/images/logos/icon-tailwindcss.svg';
-import LogoFigma from '/public/images/logos/icon-figma.svg';
-import LogoCypress from '/public/images/logos/icon-cypress.svg';
-import LogoCypressLight from '/public/images/logos/icon-cypress-light.svg';
-import LogoStorybook from '/public/images/logos/icon-storybook.svg';
-import LogoGit from '/public/images/logos/icon-git.svg';
-
-import LogoUpwork from '/public/images/logos/logo-upwork.svg';
-import LogoGreenApex from '/public/images/logos/logo-greenapex.svg';
-import LogoGreenApexLight from '/public/images/logos/logo-greenapex-light.svg';
-import LogoDotnpixel from '/public/images/logos/logo-dotnpixel.svg';
-import LogoDotnpixelLight from '/public/images/logos/logo-dotnpixel-light.svg';
-
-import ProjectFiskil from '/public/images/project-fiskil.png';
-import ProjectWingie from '/public/images/project-wingie.png';
-import ProjectPepehousing from '/public/images/project-pepehousing.png';
-
-import AvatarKrisztian from '/public/images/avatar-krisztian.png';
-import AvatarEugen from '/public/images/avatar-eugen.png';
-import AvatarDummy from '/public/images/avatar-dummy.svg';
+import {
+  Bot,
+  Boxes,
+  Braces,
+  BrainCircuit,
+  Cloud,
+  Code2,
+  Database,
+  FileCode2,
+  GitBranch,
+  Github,
+  Linkedin,
+  Mail,
+  Map,
+  Monitor,
+  Network,
+  PenTool,
+  SearchCode,
+  Server,
+  Terminal,
+  Workflow,
+} from 'lucide-react';
 
 import {
   ExperienceDetails,
   ProjectDetails,
+  SkillCategory,
   TechDetails,
   TestimonialDetails,
 } from '@/lib/types';
 
+import ProjectPirateSearch from '/public/images/project-pirate-search.png';
+import ProjectSportsPlayerScout from '/public/images/project-sports-player-scout.png';
+import ProjectTrailblazer from '/public/images/project-trailblazer.png';
+
 export const EXTERNAL_LINKS = {
-  GITHUB: 'https://github.com/shahsagarm',
-  GITHUB_REPO: 'https://github.com/shahsagarm/sagarshah.dev',
-  TWITTER: 'https://twitter.com/shahsagarm',
-  FIGMA: 'https://www.figma.com/@shahsagarm',
-  FIGMA_FILE:
-    'https://www.figma.com/community/file/1262992249991763120/Personal-Portfolio-Website-Template-%7C-Mobile-%26-Desktop',
+  GITHUB: 'https://github.com/ahuda07',
+  LINKEDIN: 'https://www.linkedin.com/in/asharhuda/',
+  EMAIL: 'mailto:hudaau@uci.edu',
 };
 
 export const NAV_LINKS = [
@@ -56,12 +45,20 @@ export const NAV_LINKS = [
     href: '#about',
   },
   {
-    label: 'Work',
-    href: '#work',
+    label: 'Skills',
+    href: '#skills',
   },
   {
-    label: 'Testimonials',
-    href: '#testimonials',
+    label: 'Experience',
+    href: '#experience',
+  },
+  {
+    label: 'Resume',
+    href: '#resume',
+  },
+  {
+    label: 'Work',
+    href: '#work',
   },
   {
     label: 'Contact',
@@ -72,220 +69,172 @@ export const NAV_LINKS = [
 export const SOCIAL_LINKS = [
   {
     icon: Github,
-    url: 'https://github.com/shahsagarm',
+    url: EXTERNAL_LINKS.GITHUB,
   },
   {
-    icon: Twitter,
-    url: 'https://twitter.com/shahsagarm',
+    icon: Linkedin,
+    url: EXTERNAL_LINKS.LINKEDIN,
   },
   {
-    icon: Figma,
-    url: 'https://www.figma.com/@shahsagarm',
+    icon: Mail,
+    url: EXTERNAL_LINKS.EMAIL,
   },
 ];
 
 export const TECHNOLOGIES: TechDetails[] = [
+  { label: 'Python', icon: Terminal },
+  { label: 'C++', icon: Braces },
+  { label: 'Java', icon: Code2 },
   {
-    label: 'Javascript',
-    logo: LogoJavascript,
+    label: 'JavaScript',
+    icon: FileCode2,
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   },
   {
-    label: 'Typescript',
-    logo: LogoTypescript,
+    label: 'TypeScript',
+    icon: FileCode2,
     url: 'https://www.typescriptlang.org/',
   },
+  { label: 'SQL', icon: Database },
+  { label: 'HTML/CSS', icon: Monitor },
+  { label: 'React.js', icon: Code2, url: 'https://react.dev/' },
+  { label: 'Node.js', icon: Server, url: 'https://nodejs.org/en' },
+  { label: 'FastAPI', icon: Network },
+  { label: 'Bootstrap', icon: Boxes },
+  { label: 'Vite', icon: Workflow },
+  { label: 'NumPy', icon: BrainCircuit },
+  { label: 'PyTorch', icon: BrainCircuit },
+  { label: 'OpenCV', icon: SearchCode },
+  { label: 'BeautifulSoup', icon: SearchCode },
+  { label: 'NLTK', icon: SearchCode },
+  { label: 'Gradio', icon: Bot },
+  { label: 'MongoDB', icon: Database, url: 'https://www.mongodb.com/' },
+  { label: 'REST APIs', icon: Network },
+  { label: 'Git', icon: GitBranch, url: 'https://git-scm.com/' },
+  { label: 'GitHub', icon: Github },
+  { label: 'Azure', icon: Cloud },
+  { label: 'Jupyter Notebook', icon: FileCode2 },
+  { label: 'Figma', icon: PenTool, url: 'https://www.figma.com/' },
+  { label: 'Google Maps API', icon: Map },
+  { label: 'MCP', icon: Workflow },
+];
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    label: 'React',
-    logo: LogoReact,
-    url: 'https://react.dev/',
+    title: 'Languages',
+    description: 'Core programming languages for backend, systems, and web.',
+    skills: [
+      TECHNOLOGIES[0],
+      TECHNOLOGIES[1],
+      TECHNOLOGIES[2],
+      TECHNOLOGIES[3],
+      TECHNOLOGIES[4],
+      TECHNOLOGIES[5],
+      TECHNOLOGIES[6],
+    ],
   },
   {
-    label: 'Next.js',
-    logo: LogoNextjs,
-    url: 'https://nextjs.org/',
+    title: 'Full-Stack',
+    description: 'Frontend, API, and product-building frameworks.',
+    skills: [
+      TECHNOLOGIES[7],
+      TECHNOLOGIES[8],
+      TECHNOLOGIES[9],
+      TECHNOLOGIES[10],
+      TECHNOLOGIES[11],
+      TECHNOLOGIES[19],
+    ],
   },
   {
-    label: 'Node.js',
-    logo: LogoNodejs,
-    url: 'https://nodejs.org/en',
+    title: 'AI & Data',
+    description: 'ML, NLP, search, and AI application tooling.',
+    skills: [
+      TECHNOLOGIES[12],
+      TECHNOLOGIES[13],
+      TECHNOLOGIES[14],
+      TECHNOLOGIES[15],
+      TECHNOLOGIES[16],
+      TECHNOLOGIES[17],
+      TECHNOLOGIES[26],
+    ],
   },
   {
-    label: 'Express.js',
-    logo: LogoExpress,
-    darkModeLogo: LogoExpressLight,
-    url: 'https://expressjs.com/',
-  },
-  {
-    label: 'Nest.js',
-    logo: LogoNest,
-    url: 'https://nestjs.com/',
-  },
-  {
-    label: 'Socket.io',
-    logo: LogoSocket,
-    darkModeLogo: LogoSocketLight,
-    url: 'https://socket.io/',
-  },
-  {
-    label: 'PostgreSQL',
-    logo: LogoPostgreSQL,
-    url: 'https://www.postgresql.org/',
-  },
-  {
-    label: 'MongoDB',
-    logo: LogoMongoDB,
-    url: 'https://www.mongodb.com/',
-  },
-  {
-    label: 'Sass/Scss',
-    logo: LogoSass,
-    url: 'https://sass-lang.com/',
-  },
-  {
-    label: 'Tailwindcss',
-    logo: LogoTailwindcss,
-    url: 'https://tailwindcss.com/',
-  },
-  {
-    label: 'Figma',
-    logo: LogoFigma,
-    url: 'https://www.figma.com/',
-  },
-  {
-    label: 'Cypress',
-    logo: LogoCypress,
-    darkModeLogo: LogoCypressLight,
-    url: 'https://www.cypress.io/',
-  },
-  {
-    label: 'Storybook',
-    logo: LogoStorybook,
-    url: 'https://storybook.js.org/',
-  },
-  {
-    label: 'Git',
-    logo: LogoGit,
-    url: 'https://git-scm.com/',
+    title: 'Databases & Tools',
+    description: 'Databases, collaboration, cloud, notebooks, and design.',
+    skills: [
+      TECHNOLOGIES[18],
+      TECHNOLOGIES[20],
+      TECHNOLOGIES[21],
+      TECHNOLOGIES[22],
+      TECHNOLOGIES[23],
+      TECHNOLOGIES[24],
+      TECHNOLOGIES[25],
+    ],
   },
 ];
 
 export const EXPERIENCES: ExperienceDetails[] = [
   {
-    logo: LogoUpwork,
-    logoAlt: 'Upwork logo',
-    position: 'Independent Freelancer',
-    startDate: new Date(2021, 10),
-    currentlyWorkHere: true,
+    logoAlt: 'Champions Funding',
+    organization: 'Champions Funding',
+    position: 'Software Engineer - Senior Capstone',
+    startDate: new Date(2026, 0),
+    endDate: new Date(2026, 5),
     summary: [
-      'Worked for various clients like Fiskil, Shosho, Crowe MacKay LLP.',
-      'Worked with a variety of technologies, including React, Next.js, Typescript, Express.js, PostgreSQL, Tailwindcss, Mui, Firebase, Storybook, Cypress, and others.',
+      'Building LoanFit CoPilot, a full-stack AI-driven loan assistant for loan officers.',
+      'Developing a React and TypeScript chat interface with real-time interaction, document uploads, and session persistence.',
+      'Designing MongoDB schemas for sessions, chat history, and uploaded financial documents.',
+      'Integrating a FastAPI backend with an AI pipeline that processes loan applications and returns automated risk-assessment style guidance.',
     ],
-  },
-  {
-    logo: LogoGreenApex,
-    darkModeLogo: LogoGreenApexLight,
-    logoAlt: 'Greenapex logo',
-    position: 'Team Lead',
-    startDate: new Date(2017, 6),
-    endDate: new Date(2021, 9),
-    summary: [
-      'Acted as team lead in different projects.',
-      'Brainstormed new ideas & gathered requirements for internal projects.',
-      'Designed architecture of different projects (frontend + backend).',
-      'Worked on enterprise-level projects for a variety of clients.',
-      'Handled sprint planning & task distribution.',
-    ],
-  },
-  {
-    logo: LogoDotnpixel,
-    darkModeLogo: LogoDotnpixelLight,
-    logoAlt: 'Dotnpixel logo',
-    position: 'Full Stack Developer',
-    startDate: new Date(2015, 11),
-    endDate: new Date(2017, 4),
-    summary: ['Worked as a full stack developer (React / Laravel).'],
   },
 ];
 
 export const PROJECTS: ProjectDetails[] = [
   {
-    name: 'Wingie',
+    name: 'LoanFit CoPilot',
+    featured: true,
+    previewVariant: 'loanfit',
     description:
-      'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.',
-    url: 'https://www.wingie.com',
-    previewImage: ProjectWingie,
+      'A full-stack AI loan assistant that helps loan officers analyze borrower scenarios, manage chat sessions, upload financial documents, and receive AI-powered guidance.',
     technologies: [
       'React',
-      'Typescript',
-      'React Bootstrap',
-      'Firebase',
-      'Express.js',
-      'PostgreSQL',
-      'Styled Components',
-      'Redux',
+      'TypeScript',
+      'FastAPI',
+      'Python',
+      'MongoDB',
+      'AI/LLM pipeline',
     ],
   },
   {
-    name: 'Fiskil',
+    name: 'Pirate Search Engine',
+    previewImage: ProjectPirateSearch,
+    previewImagePosition: '50% 48%',
     description:
-      'A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.',
-    url: 'https://fiskil.com.au',
-    previewImage: ProjectFiskil,
+      'Built a multithreaded crawler and search engine indexing 10,000+ ICS web pages with URL deduplication, trap detection, redirect handling, tf-idf ranking, HITS authority scoring, SimHash near-duplicate detection, and inverted indexes. Delivered sub-300ms query responses.',
+    technologies: ['Python', 'BeautifulSoup', 'NLTK'],
+  },
+  {
+    name: 'Trailblazer - Biking Trail Finder',
+    previewImage: ProjectTrailblazer,
+    previewImagePosition: '50% 62%',
+    description:
+      'Full-stack trail discovery app with real-time route visualization, authentication, saved preferences, image uploads, and filtering by difficulty, distance, and ratings.',
     technologies: [
       'React',
-      'Next.js',
-      'Typescript',
-      'Tailwindcss',
-      'Material UI',
-      'Redux Toolkit',
-      'React Query',
-      'Express.js',
-      'PostgreSQL',
-      'Firebase',
-      'AWS Amplify',
-      'Cypress',
-      'Storybook',
+      'JavaScript',
+      'MongoDB',
+      'Google Maps API',
+      'Bootstrap',
     ],
   },
   {
-    name: 'Pepehousing',
+    name: 'SportsPlayerScout',
+    previewImage: ProjectSportsPlayerScout,
+    previewImagePosition: '50% 48%',
     description:
-      'A platform for renting a flat or room in Poland. You may browse hundreds of verified deals, contact the vendor, and pay online in a simple and secure manner.',
-    url: 'https://pepehousing.com',
-    previewImage: ProjectPepehousing,
-    technologies: [
-      'React',
-      'Next.js',
-      'Typescript',
-      'Tailwindcss',
-      'Redux Toolkit',
-      'React Query',
-      'Storybook',
-    ],
+      'Multi-agent sports analytics app that analyzes athlete performance data and generates scouting reports. Includes analyzer, developer, and tester agents, model usage tracking, structured JSON reporting, and a Gradio interface.',
+    technologies: ['Python', 'Gradio', 'Multi-Agent Systems', 'MCP'],
   },
 ];
 
-export const TESTIMONIALS: TestimonialDetails[] = [
-  {
-    personName: 'Krisztian Gyuris',
-    personAvatar: AvatarKrisztian,
-    title: 'Founder - inboxgenie.io',
-    testimonial:
-      'Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development.',
-  },
-  {
-    personName: 'Eugen Esanu',
-    personAvatar: AvatarEugen,
-    title: 'Founder - shosho.design',
-    testimonial:
-      'Great guy, highly recommended for any COMPLEX front-end development job! His skills are top-notch and he will be an amazing addition to any team.',
-  },
-  {
-    personName: 'Joe Matkin',
-    personAvatar: AvatarDummy,
-    title: 'Freelancer',
-    testimonial:
-      'Sagar was extremely easy and pleasant to work with and he truly cares about the project being a success. Sagar has a high level of knowledge and was able to work on my MERN stack application without any issues.',
-  },
-];
+export const TESTIMONIALS: TestimonialDetails[] = [];
